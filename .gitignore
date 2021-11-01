@@ -1,6 +1,6 @@
 # Ignora archivos del sistema Mac 
 .DS_store
-
+Services
 # Ignora la carpeta node_modules
 node_modules
 
@@ -14,4 +14,6 @@ node_modules
 .sass-cache
 # Ignora archivos de configuración package-lock.json
 package-lock.json
+# Ignora archivos de configuración package.json
+
 package.json
