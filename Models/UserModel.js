@@ -13,7 +13,10 @@ const UserSchema = Schema({
     age: Number,
     token: String,
     description: String,
-    nacion: String
+    nacion: String,
+    formacion: String,
+    lenguage: String,
+    redes: String
 })
 
 module.exports = mongoose.model('Users', UserSchema)

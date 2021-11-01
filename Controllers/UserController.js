@@ -113,6 +113,11 @@ function saveUser(req, res) {
         user.token = param.token,
         user.description = param.description,
         user.nacion = param.nacion,
+        user.formacion = param.formacion,
+        user.lenguage = param.lenguage,
+        user.redes = param.redes,
+
+
         user.save().then(
             userGuardado => {
                 res.status(200).send({
