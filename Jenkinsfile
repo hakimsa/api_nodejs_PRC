@@ -15,12 +15,12 @@ pipeline {
           }
         }
 
-      }
-    }
+        stage('Customization packges') {
+          steps {
+            sh 'ls'
+          }
+        }
 
-    stage('') {
-      steps {
-        echo 'ok'
       }
     }
 
