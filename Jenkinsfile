@@ -35,7 +35,7 @@ pipeline {
             sh ' echo ok yes is ok el deployememnt >> script.txt'
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
-            sh ' node index'
+            sh ' node index.js'
            
             sh ' COMAND=$({ps aux |grep node})'
             sh 'echo $COMAND'
