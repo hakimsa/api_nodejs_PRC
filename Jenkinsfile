@@ -24,7 +24,7 @@ pipeline {
         
         stage('Build') { 
             steps {
-              sh 'cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
+                sh 'cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
                 sh 'npm install' 
             }
         }
