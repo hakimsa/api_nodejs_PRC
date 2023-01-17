@@ -38,7 +38,8 @@ pipeline {
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             
-           
+            sh ' pwd '
+            sh ' node index.js'
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
      
