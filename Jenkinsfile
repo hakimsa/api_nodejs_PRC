@@ -32,6 +32,8 @@ pipeline {
             sh ' touch script.txt'
             sh ' cd /deployed/dev'
             sh ' echo ok yes is ok el deployememnt >> script.txt'
+            sh 'npm install mongoose'
+            sh ' node index.js'
           }
         }
 
