@@ -39,6 +39,7 @@ pipeline {
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             
             sh ' pwd '
+            sh ' nvm install 16.15.1'
             sh ' node -v'
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
