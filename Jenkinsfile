@@ -41,27 +41,10 @@ pipeline {
           
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
-            sh 'nvm install 16.0.0'
-         
- 
-sh 'echo Instala una nueva versión de Node¡'
-
- 
-
-sh 'n lts'
-sh 'n latest'
- 
-
-sh 'echo Desinstala las versiones previamente instaladas'
-
- 
-
-
-sh 'n prune'
- 
+    
   
         script {
-            sh(' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && chmod +x run.sh && ./run.sh')
+            sh(' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && chmod 774 run.sh && ./run.sh')
         
     }
 }
