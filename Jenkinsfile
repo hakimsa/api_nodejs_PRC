@@ -34,6 +34,9 @@ pipeline {
             sh ' cd /deployed/dev'
             sh ' echo ok yes is ok el deployememnt >> script.txt'
             sh ' echo install dependencias'
+            sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
+            sh ' rm -rf package-lock.json'
+            sh 'npm -i'
             sh ' npm install'
      
           }
