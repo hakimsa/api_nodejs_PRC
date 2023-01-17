@@ -37,13 +37,16 @@ pipeline {
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> script.txt'
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
-            
-            sh ' pwd '
-            sh ' npm start'
-            sh ' node -v'
+          
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
-     
+ 
+  
+        script {
+            sh(' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && chmod +x run.sh && ./run.sh')
+        
+    }
+}
           }
         }
 
