@@ -20,6 +20,15 @@ pipeline {
             sh 'ls'
           }
         }
+        
+        stage('Deployed_test') {
+          when(branch 'master',beforeAgent true}
+               agent {
+label 'Devserver'               }
+          steps {
+            sh 'ls'
+          }
+        }
 
       }
     }
