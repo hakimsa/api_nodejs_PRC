@@ -18,6 +18,22 @@ pipeline {
         stage('Customization packges') {
           steps {
             sh 'ls'
+           sh ' npm install -g n'
+ 
+sh 'echo Instala una nueva versión de Node¡'
+
+ 
+
+sh 'n lts'
+sh 'n latest'
+ 
+
+sh 'echo Desinstala las versiones previamente instaladas'
+
+ 
+
+
+sh 'n prune'
           }
         }
        
