@@ -27,7 +27,7 @@ pipeline {
                agent { label 'Devserver'}
           steps {
             sh 'ls'
-            sh  echo ' deployed en Devserver'
+            sh  ' echo  deployed en Devserver'
           }
         }
 
