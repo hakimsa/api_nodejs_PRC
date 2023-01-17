@@ -41,7 +41,8 @@ pipeline {
           
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
-             sh ' npm install -g n'
+            sh 'nvm install 16.0.0'
+         
  
 sh 'echo Instala una nueva versión de Node¡'
 
