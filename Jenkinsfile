@@ -34,7 +34,7 @@ pipeline {
             sh ' cd /deployed/dev'
             sh ' date_now=$(date "+DATE: %D%nTIME: %T")'
             sh ' echo $date_now_$BUILD_NUMBER_$GIT_BRANCH >> histo_deplyed.txt'
-            sh ' echo $date_now__$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> script.txt'
+            sh ' echo date "+DATE: %D%nTIME: %T"__$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> script.txt'
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             
