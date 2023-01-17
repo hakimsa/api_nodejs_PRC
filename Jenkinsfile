@@ -21,14 +21,7 @@ pipeline {
           }
         }
        
-        
-        stage('Build') { 
-            steps {
-                sh 'cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
-                sh 'npm install' 
-            }
-        }
-
+      
         stage('Deployed_test') {
           
   
@@ -40,6 +33,8 @@ pipeline {
             sh ' touch script.txt'
             sh ' cd /deployed/dev'
             sh ' echo ok yes is ok el deployememnt >> script.txt'
+            sh ' echo install dependencias "
+            sh ' npm install'
      
           }
         }
