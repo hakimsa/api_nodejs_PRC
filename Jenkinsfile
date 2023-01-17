@@ -23,10 +23,11 @@ pipeline {
         
         stage('Deployed_test') {
           
-          when { Branch 'test' beforeAgent true}
+  
                agent { label 'Devserver'}
           steps {
             sh 'ls'
+            sh  echo ' deployed en Devserver'
           }
         }
 
