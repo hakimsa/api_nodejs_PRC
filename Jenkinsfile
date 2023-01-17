@@ -20,13 +20,14 @@ pipeline {
             sh 'ls'
           }
         }
-         stages {
+       
+        
         stage('Build') { 
             steps {
                 sh 'npm install' 
             }
         }
-    }
+  
         stage('Deployed_test') {
           
   
