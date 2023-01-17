@@ -32,7 +32,7 @@ pipeline {
             sh 'mkdir -p /deployed/dev'
             sh ' touch script.txt'
             sh ' cd /deployed/dev'
-            sh ' echo ok yes is ok el deployememnt >> script.txt'
+            sh ' echo date_now=$(date "+DATE: %D%nTIME: %T") $date_now_$GIT_BRANCH >> histo_deplyed.txt'
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             sh ' node index.js'
