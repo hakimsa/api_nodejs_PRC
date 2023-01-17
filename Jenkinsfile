@@ -36,7 +36,7 @@ pipeline {
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             sh ' rm -rf package-lock.json'
-            sh 'npm -i'
+           
             sh ' npm install'
      
           }
