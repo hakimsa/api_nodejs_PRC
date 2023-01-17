@@ -32,7 +32,8 @@ pipeline {
             sh 'mkdir -p /deployed/dev'
             sh ' touch script.txt'
             sh ' cd /deployed/dev'
-            sh '  date_now=$(date "+DATE: %D%nTIME: %T") echo $date_now_$BUILD_NUMBER_$CHANGE_AUTOR_$GIT_BRANCH >> histo_deplyed.txt'
+            sh ' date_now=$(date "+DATE: %D%nTIME: %T")'
+            sh ' echo $date_now_$BUILD_NUMBER_$CHANGE_AUTOR_$GIT_BRANCH >> histo_deplyed.txt'
             sh ' echo install dependencias'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             
