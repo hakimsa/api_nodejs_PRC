@@ -24,7 +24,7 @@ pipeline {
         stage('Deployed_test') {
           
   
-               agent { label 'Devserver'}
+               agent { label 'dev'}
           steps {
             sh 'ls'
             sh  ' echo  deployed en Devserver'
