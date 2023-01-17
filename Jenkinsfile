@@ -28,6 +28,9 @@ pipeline {
           steps {
             sh 'ls'
             sh  ' echo  deployed en Devserver'
+            sh 'mkdir -p /deployed/dev'
+            sh ' touch script.txt'
+            sh ' echo ok yes >> script.txt'
           }
         }
 
