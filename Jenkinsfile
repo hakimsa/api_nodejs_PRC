@@ -30,7 +30,8 @@ pipeline {
             sh  ' echo  deployed en Devserver'
             sh 'mkdir -p /deployed/dev'
             sh ' touch script.txt'
-            sh ' echo ok yes >> script.txt'
+            sh ' cd /deployed/dev'
+            sh ' echo ok yes is ok el deployememnt >> script.txt'
           }
         }
 
