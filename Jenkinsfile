@@ -42,12 +42,7 @@ pipeline {
             sh ' COMAND=$(ps aux |grep node)'
             sh 'echo $COMAND'
     
-             sh 'nvm install --lts'
-             sh 'nvm alias default 16.15.1'
-        script {
-            sh(' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && chmod 774 run.sh && ./run.sh')
-        
-    }
+    
 }
           }
         }
