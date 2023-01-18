@@ -24,23 +24,18 @@ pipeline {
        
       
         stage('Deployed_test') {
-          
-  
                agent { label 'dev'}
           steps {
             sh 'ls'
-            sh  ' echo  deployed en Devserver'
+            sh  ' echo  deployement to  test  server '
             sh 'mkdir -p /deployed/dev'
-            sh ' touch script.txt'
-            sh ' cd /deployed/dev'
-            sh ' date_now=$(date "+DATE: %D%nTIME: %T")'
-            sh ' echo $date_now_$BUILD_NUMBER_$GIT_BRANCH >> histo_deplyed.txt'
-            sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> script.txt'
+            sh ' touch $(date "+%d-%H-%m-%Y")_histo_deployed.txt'
+            sh ' cd /deployed/dev
+            sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> $(date "+%d-%H-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
-            
             sh ' COMAND=$(ps aux |grep node)'  
-            sh 'echo ${COMAND}'
+          
          
     
 }
