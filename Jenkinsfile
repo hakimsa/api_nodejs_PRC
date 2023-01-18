@@ -36,11 +36,13 @@ pipeline {
             sh ' date_now=$(date "+DATE: %D%nTIME: %T")'
             sh ' echo $date_now_$BUILD_NUMBER_$GIT_BRANCH >> histo_deplyed.txt'
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> script.txt'
-            sh ' echo install dependencias'
+            sh ' echo install dependencias'  
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
-          
-            sh ' COMAND=$(ps aux |grep node)'
+            
+            sh ' COMAND=$(ps aux |grep node)'  
             sh 'echo $COMAND'
+            script{
+              sh 'sh run.sh'
     
     
 }
