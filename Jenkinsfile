@@ -36,8 +36,8 @@ pipeline {
          
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME>> $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
-            sh 'echo $BUILD_STATUS'
-            sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
+          
+            sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && sh run.sh'
             sh ' COMAND=$(ps aux |grep node)'  
           
          
