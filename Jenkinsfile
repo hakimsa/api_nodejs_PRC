@@ -34,8 +34,9 @@ pipeline {
              
             echo "During Build currentResult: ${currentBuild.currentResult}"
          
-            sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME_$BUILD_STATUS >> $(date "+%d-%m-%Y")_histo_deployed.txt'
+            sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME>> $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
+            sh 'echo $BUILD_STATUS'
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             sh ' COMAND=$(ps aux |grep node)'  
           
