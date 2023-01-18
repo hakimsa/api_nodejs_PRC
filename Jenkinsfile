@@ -30,7 +30,7 @@ pipeline {
             sh  ' echo  deployement to  test  server '
             sh 'mkdir -p /deployed/dev'
             sh ' touch $(date "+%d-%H-%m-%Y")_histo_deployed.txt'
-            sh ' cd /deployed/dev
+            sh ' cd /deployed/dev'
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME >> $(date "+%d-%H-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
