@@ -42,7 +42,7 @@ pipeline {
             sh ' COMAND=$(ps aux |grep node)'  
             sh 'echo $COMAND'
             script{
-              sh 'sh run.sh'
+              sh 'cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test && sh run.sh'
             }
     
 }
