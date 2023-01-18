@@ -43,7 +43,7 @@ pipeline {
             sh 'echo $COMAND'
             script{
               sh 'sh run.sh'
-    
+            }
     
 }
           }
