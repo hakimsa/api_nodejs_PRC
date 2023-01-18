@@ -37,7 +37,7 @@ pipeline {
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME>> $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
           
-            sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
+            sh ' cd /jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
             script{
             sh 'sudo nohup sh run.sh ' 
              
