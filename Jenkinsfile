@@ -39,7 +39,7 @@ pipeline {
           
             sh ' cd /jenkins/slave/build/workspace/_Preproduction_multi_branch_test'
             script{
-            sh 'nohup sh run.sh' 
+            sh 'sudo nohup sh run.sh' 
               sh 'exit'
             }
             sh ' COMAND=$(ps aux |grep node)'  
