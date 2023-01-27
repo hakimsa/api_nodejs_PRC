@@ -39,22 +39,8 @@ pipeline {
           
            sh ' cd /jen kins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
             sh' pwd  '
-            sh '
-            
-            DIR="/jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test"
-             if [ -d "$DIR" ]; then
-           ### Take action if $DIR exists ###
-            echo "Installing config files in ${DIR}..."
-            cd /jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
-            pwd
-            else
-           ###  Control will jump here if $DIR does NOT exists ###
-            echo "Error: ${DIR} not found. Can not continue."
-            
-            exit 1
-           fi
-         
-            
+            sh 'sh deploy.sh'
+  
             script{
             sh 'sudo nohup sh run.sh ' 
              
