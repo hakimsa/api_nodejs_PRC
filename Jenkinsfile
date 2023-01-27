@@ -15,10 +15,12 @@ pipeline {
           }
         }
 
-        stage('Customization packges') {
+        stage('Customization dependencies') {
           steps {
-            sh 'ls'
-          
+            sh 'echo Install dependencies'
+            sh' npm install express'
+           sh'npm install body-parser'
+            sh' npm install -D nodemon '
           }
         }
        
@@ -31,8 +33,7 @@ pipeline {
             sh 'mkdir -p /deployed/dev'
             sh ' touch $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' cd /deployed/dev'
-             
-            echo "During Build currentResult: ${currentBuild.currentResult}"
+          
          
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME>> $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
@@ -46,6 +47,8 @@ pipeline {
              
             }
             sh ' COMAND=$(ps aux |grep node)'  
+            
+           echo "During Build currentResult: ${currentBuild.currentResult}"
           
          
     
