@@ -38,6 +38,9 @@ pipeline {
             sh ' echo install dependencias'  
           
             sh ' cd /jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
+            sh' pwd  '
+            sh 'rm -R /jenkins/slave/build/workspace/multi_branch-livriason_master@2@tmp'
+            
             script{
             sh 'sudo nohup sh run.sh ' 
              
