@@ -37,9 +37,23 @@ pipeline {
             sh ' echo $(date "+%F-%H-%M-%S")_$GIT_BRANCH_$BUILD_NUMBER_$JOB_NAME>> $(date "+%d-%m-%Y")_histo_deployed.txt'
             sh ' echo install dependencias'  
           
-            sh ' cd /jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
+           sh ' cd /jen kins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
             sh' pwd  '
-            sh 'rm -R /jenkins/slave/build/workspace/multi_branch-livriason_master@2@tmp'
+            sh '
+            
+            DIR="/jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test"
+             if [ -d "$DIR" ]; then
+           ### Take action if $DIR exists ###
+            echo "Installing config files in ${DIR}..."
+            cd /jenkins/slave/build/workspace/n_livarison__api_nodejs_PRC_test'
+            pwd
+            else
+           ###  Control will jump here if $DIR does NOT exists ###
+            echo "Error: ${DIR} not found. Can not continue."
+            
+            exit 1
+           fi
+         
             
             script{
             sh 'sudo nohup sh run.sh ' 
