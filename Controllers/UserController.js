@@ -139,8 +139,8 @@ function updateUser(req, res) {
     let idUser = req.params.id
     let param = req.body
 
-    //{new:true}  ===>  hace que devuelva el nuevo coche insertado
-    Coche.findByIdAndUpdate(idUser, param, {
+    //{new:true}  ===>  hace que devuelva el nuevo User insertado
+    User.findByIdAndUpdate(idUser, param, {
         new: true
     }).then(
         userActualizado => {
