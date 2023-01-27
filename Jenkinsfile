@@ -17,10 +17,10 @@ pipeline {
 
         stage('Customization dependencies') {
           steps {
-            sh 'echo Install dependencies'
             sh' npm install express'
-           sh'npm install body-parser'
+            sh'npm install body-parser'
             sh' npm install -D nodemon '
+            sh' echo $?'
           }
         }
        
