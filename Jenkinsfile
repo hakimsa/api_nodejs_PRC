@@ -43,7 +43,7 @@ pipeline {
             sh 'sh deploy.sh'
   
             script{
-            sh 'sudo nohup sh run.sh ' 
+            sh 'whoami' 
              
             }
             sh ' COMAND=$(ps aux |grep node)'  
