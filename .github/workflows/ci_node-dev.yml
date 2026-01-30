@@ -1,5 +1,5 @@
 
-name: Java CI with Maven
+name: Node.js CI with Express
 
 on:
   push:
@@ -19,5 +19,7 @@ jobs:
       with:
         node-version: '17'
         cache: npm
-    - name: Build with Maven
-      run: node -v
+    - name: Build with node project
+      run: node index.js
+    - name: Run tests
+      run: npm test
