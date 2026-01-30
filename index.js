@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 
 app.get('/user/:id', UserController.getUser);
-app.get('/userss/:firstname', UserController.getUser_byname);
+app.get('/user/:firstname', UserController.getUser_byname);
 app.get('/users', UserController.getUsers);
 app.post('/user', UserController.saveUser);
 app.put('/user/:id', UserController.updateUser);
