@@ -1,7 +1,7 @@
 {
     "name": "backend_nodejs",
     "version": "1.0.0",
-    "description": "Test app n",
+    "description": "Test app nodejs with express and mongoose",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
