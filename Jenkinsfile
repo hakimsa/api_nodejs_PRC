@@ -1,5 +1,5 @@
 // Jenkinsfile
-@Library('jenkins-shared-lib@develop28') _
+@Library('jenkins-shared-lib@develop') _
 nodejsPipeline(
     nodeVersion: '18'
 )
