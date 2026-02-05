@@ -1,5 +1,7 @@
 // Jenkinsfile
 @Library('jenkins-shared-lib@main') _
 nodePipeline(
-    nodeVersion: '18'
+    appName: 'my-node-api',
+    nodeEnv: 'developement',
+    nodeVersion: 'node-18'
 )
